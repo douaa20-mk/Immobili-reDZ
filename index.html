@@ -17,10 +17,16 @@
         <ul>
             <li onclick="navigateTo('home')"> Home</li>
             <li onclick="navigateTo('about')">About Us</li>
-            <li onclick="navigateTo('contact')">Contact</li>
+            <li onclick="toggleContact()">Contact</li>
             <li onclick="togglePreferences()">Preferences</li>
             <li onclick="toggleSettings()">Settings</li>
         </ul>
+        <div id="contact" class="dropdown">
+            <ul>
+                <li>Email: contact@immobiliereDZ.com</li>
+                <li>Phone: +213 123 456 789</li>
+            </ul>
+        </div>
         <div id="preferences" class="dropdown">
             <ul>
                 <li onclick="changeLanguage('ar')">Arabic</li>
