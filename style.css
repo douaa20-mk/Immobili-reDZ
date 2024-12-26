@@ -2,10 +2,10 @@
 body {
   margin: 0;
   font-family: 'Ysabeau SC', sans-serif;
- }
- 
- /* Sidebar Styles */
- .sidebar {
+}
+
+/* Sidebar Styles */
+.sidebar {
   position: fixed;
   left: 0;
   top: 0;
@@ -17,85 +17,84 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 0px;
- }
- 
- .sidebar .logo img {
+}
+
+.sidebar .logo img {
   width: 120px;
   margin-bottom: 50px;
-  padding: 0px;
- }
- 
- .sidebar ul {
+}
+
+.sidebar ul {
   list-style-type: none;
   padding: 0px;
   width: 100%;
   text-align: center;
- }
- 
- .sidebar ul li {
+}
+
+.sidebar ul li {
   margin: 15px 0;
   cursor: pointer;
- }
- 
- /* Dropdown Styles */
- .dropdown {
+}
+
+/* Dropdown Styles */
+.dropdown {
   display: none;
   background: #036789;
   padding: 0px;
   border-radius: 5px;
- }
- 
- .dropdown ul {
+}
+
+.dropdown ul {
   list-style-type: none;
   padding: 0;
- }
- 
- .dropdown ul li {
+}
+
+.dropdown ul li {
   margin: 5px 0;
   cursor: pointer;
- }
- 
- /* Show dropdown on click */
- .active {
+}
+
+/* Show dropdown on click */
+.active {
   display: block;
- }
- 
- /* Diaporama Styles */
- .diaporama {
+}
+
+/* Diaporama Styles */
+.diaporama {
   margin-left: 20%;
   width: 80%;
   height: 100vh;
   position: relative;
   overflow: hidden;
- }
- 
- .diaporama .slides img {
+}
+
+.diaporama .slides img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   position: absolute;
   animation: slide 12s infinite;
   opacity: 0;
- }
- 
- .diaporama .slides img:nth-child(1) {
+}
+
+.diaporama .slides img:nth-child(1) {
   animation-delay: 0s;
- }
- 
- .diaporama .slides img:nth-child(2) {
+}
+
+.diaporama .slides img:nth-child(2) {
   animation-delay: 4s;
- }
- 
- .diaporama .slides img:nth-child(3) {
+}
+
+.diaporama .slides img:nth-child(3) {
   animation-delay: 8s;
- }
- 
- @keyframes slide {
+}
+
+@keyframes slide {
   0%, 100% { opacity: 0; }
   33%, 66% { opacity: 1; }
- }
- 
- .diaporama .overlay {
+}
+
+.diaporama .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -107,18 +106,18 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
- }
- 
- .diaporama .overlay h1 {
+}
+
+.diaporama .overlay h1 {
   font-size: 3em;
   margin: 0;
- }
- 
- .diaporama .overlay p {
+}
+
+.diaporama .overlay p {
   font-size: 1.5em;
   margin: 0;
- }
- 
+}
+
 /* Opportunities Section */
 .opportunities {
   display: flex;
@@ -193,14 +192,102 @@ body {
   cursor: pointer;
 }
 
- 
- /* Footer and About Us */
- .about, .contact {
+/* Footer and About Us */
+.about, .contact {
   margin-left: 20%;
   padding: 20px;
   background: #ffffff;
- }
- 
- .contact p {
+}
+
+.contact p {
   margin: 5px 0;
- }
+}
+
+/* Responsive for Mobile Devices */
+@media (max-width: 768px) {
+  /* Sidebar becomes top navigation */
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+
+  .sidebar ul li {
+    font-size: 0.9em; /* Reduce text size for mobile */
+    margin: 10px;
+  }
+
+  .diaporama {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .opportunities {
+    flex-direction: column;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .left-panel, .right-panel {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .left-panel img {
+    width: 100%;
+    height: auto;
+  }
+
+  .right-panel iframe {
+    height: 250px; /* Adjust iframe size for smaller screens */
+  }
+
+  /* Adjust Diaporama text */
+  .diaporama .overlay h1 {
+    font-size: 2em;
+  }
+
+  .diaporama .overlay p {
+    font-size: 1.2em;
+  }
+
+  .diaporama .slides img {
+    animation: slide 12s infinite; /* Keep the animation but reduce it for mobile */
+  }
+
+  /* Chatbot Styles */
+  .right-panel .chatbot {
+    width: 100%;
+    height: 300px; /* Adjust height for small screens */
+  }
+
+  .chatbot-header {
+    font-size: 1.2em; /* Make header text smaller */
+  }
+
+  .contact p {
+    font-size: 0.9em;
+  }
+}
+
+/* Additional mobile tweaks for very small screens */
+@media (max-width: 480px) {
+  .diaporama .overlay h1 {
+    font-size: 1.8em;
+  }
+
+  .diaporama .overlay p {
+    font-size: 1em;
+  }
+
+  .right-panel iframe {
+    height: 200px; /* Adjust iframe for smaller mobile screens */
+  }
+
+  .chatbot-header {
+    font-size: 1em; /* Make chatbot header text smaller */
+  }
+}
